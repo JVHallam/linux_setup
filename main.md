@@ -9,3 +9,7 @@ Ubuntu: 18.04.3 LTS ( Lubuntu )
 * Laptop:
     * Update my default font size, I have to squint to see this shit
     * Handle the screen tearing
+    * Get all the work stuff working
+
+* Desktop:
+    * Validate that the above works

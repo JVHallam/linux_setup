@@ -1,8 +1,5 @@
 # Tested Scripts:
-* Teams
+* MS Teams ( Ran as "teams" )
 
 # Remina
 * ( INSTALL SCRIPT NEEDED )
-
-# Teams
-* Run the script
