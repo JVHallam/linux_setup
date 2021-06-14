@@ -1,3 +1,4 @@
+#!/bin/bash
 # Update the list of packages
 sudo apt-get update
 # Install pre-requisite packages.
