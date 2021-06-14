@@ -25,6 +25,4 @@ filetype indent on
 set textwidth=0
 set wrap
 
-function TestBalls()
-    echo "balls"
-endfunction
+set incsearch
