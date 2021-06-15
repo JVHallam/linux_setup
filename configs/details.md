@@ -15,4 +15,31 @@ Section "Device"
    Option      "TearFree"    "true"
 EndSection
 
-What about vsync?
+To figure out what to put here:
+lspci | grep VGA
+
+## NVidia Graphics cards:
+sudo apt install nvidia-settings
+
+* This needs to be run on startup:
+    * nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+    * crontab -e
+    * Select vim
+    * @reboot nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+
+# Picom, to handle the composite stuff and vsync shit
+
+* Dependencies:
+    * sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libpcre3-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
+
+* requires: sudo apt get install -y gcc python3 meson ninja-build cmake
+ 
+* Create a "compiled_from_source" repo in Docuements/Programming
+    * Then you clone picom here
+
+* buildling and installing
+    * in the root
+    * git submodule update --init --recursive
+    * meson --buildtype=release . build
+    * ninja -C build
+    * ninja -C build install
