@@ -15,10 +15,10 @@ Ubuntu: 18.04.3 LTS ( Lubuntu )
     * this setting does nothing
 
 # To Do
-* Laptop:
-    * Update my default font size, I have to squint to see this shit
-    * Handle the screen tearing
-    * Get all the work stuff working
+* Screen tearing And graphics:
+    * Get the nvidia software running
+    * Make sure that the settings are configured for the card and monitor correctly
+    * Get the picom shit running on startup / As a service
 
-* Desktop:
-    * Validate that the above works
+* General:
+    * Add in SSH key for github

@@ -19,14 +19,6 @@ To figure out what to put here:
 lspci | grep VGA
 
 ## NVidia Graphics cards:
-sudo apt install nvidia-settings
-
-* This needs to be run on startup:
-    * nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
-    * crontab -e
-    * Select vim
-    * @reboot nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
-
 # Picom, to handle the composite stuff and vsync shit
 
 * Dependencies:
@@ -43,3 +35,23 @@ sudo apt install nvidia-settings
     * meson --buildtype=release . build
     * ninja -C build
     * ninja -C build install
+
+* picom.conf
+    * Setting:
+        * vsync = true;
+        * backend="glx";
+    * doesn't work
+        * ~/.config/picom/picom.conf
+
+    * trying ~/.config/picom.conf
+
+* Picom is installed to /usr/local/bin
+
+* Need to get picom running at startup
+* picom --experimental-backends
+
+* Making picom a service:
+    * /etc/systemd/system/picom.service
+
+* sudo systemctl start picom 
+* sudo systemctl status picom 
