@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt install vim -y
 sudo apt install curl -y
 sudo apt install htop -y
