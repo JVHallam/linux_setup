@@ -4,22 +4,6 @@
 # Screen and font sizes:
 * xrandr - gets the size details
 
-# Mouse sensitivity:
-* xinput
-* xinput list-props <mouse-id>
-* xinput set-prop 9 'Coordinate Transformation Matrix' 1 0 0 0 1 0 0 0 0.75
-    * where 0.75 on the end, is the sensitivity. The lower, the faster
-
-# Github SSH keys
-* ssh-keygen -t rsa -b 4096 -C "jakehallam95@gmail.com"
-
-* Start the ssh agent
-    * eval $(ssh-agent -s)
-
-* ssh-add ~/.ssh/id_rsa
-
-* then, add the key to github
-
 # Screen Tearing:
 https://wiki.archlinux.org/title/Intel_graphics#Tearing
 sudo mkdir -p /etc/X11/xorg.conf.d/
@@ -76,3 +60,13 @@ lspci | grep VGA
 * By default, lubuntu uses the neuveu drivers
 * Go into the "Additional Drivers Menu"
 * Select the NVidia driver ( using the 460 one ), for the GTX 750 Ti
+
+## What finally fixed it for good:
+* had nvidia-settings installed
+* Selected the drivers like above
+* used nvidia-settings to update the /etc/X11/xorg.conf
+    * It adds for you, the section called "screen"
+        * Option "metamodes" "nvidia-auto-select +0+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
+        * Replacing the old metamodes setting
+
+## PICOM isn't needed
