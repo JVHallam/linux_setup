@@ -4,6 +4,12 @@
 # Screen and font sizes:
 * xrandr - gets the size details
 
+# Mouse sensitivity:
+* xinput
+* xinput list-props <mouse-id>
+* xinput set-prop 9 'Coordinate Transformation Matrix' 1 0 0 0 1 0 0 0 0.75
+    * where 0.75 on the end, is the sensitivity. The lower, the faster
+
 # Screen Tearing:
 https://wiki.archlinux.org/title/Intel_graphics#Tearing
 sudo mkdir -p /etc/X11/xorg.conf.d/
