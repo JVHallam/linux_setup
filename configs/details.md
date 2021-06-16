@@ -10,6 +10,16 @@
 * xinput set-prop 9 'Coordinate Transformation Matrix' 1 0 0 0 1 0 0 0 0.75
     * where 0.75 on the end, is the sensitivity. The lower, the faster
 
+# Github SSH keys
+* ssh-keygen -t rsa -b 4096 -C "jakehallam95@gmail.com"
+
+* Start the ssh agent
+    * eval $(ssh-agent -s)
+
+* ssh-add ~/.ssh/id_rsa
+
+* then, add the key to github
+
 # Screen Tearing:
 https://wiki.archlinux.org/title/Intel_graphics#Tearing
 sudo mkdir -p /etc/X11/xorg.conf.d/
