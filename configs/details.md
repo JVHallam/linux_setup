@@ -55,3 +55,8 @@ lspci | grep VGA
 
 * sudo systemctl start picom 
 * sudo systemctl status picom 
+
+## More Nvidia stuff:
+* By default, lubuntu uses the neuveu drivers
+* Go into the "Additional Drivers Menu"
+* Select the NVidia driver ( using the 460 one ), for the GTX 750 Ti
