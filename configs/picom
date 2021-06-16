@@ -1,2 +1,0 @@
-#!/bin/bash
-/usr/local/bin/picom --config picom.conf --experimental-backends -b

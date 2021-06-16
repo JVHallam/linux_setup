@@ -4,3 +4,4 @@
 rm ~/.vimrc -f
 ln -s "$(pwd)/.vimrc" ~/.vimrc
 git config --global credential.helper cache
+cp picom.conf /home/jake/.config

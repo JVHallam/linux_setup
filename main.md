@@ -1,6 +1,6 @@
 # Distro:
-Ubuntu: 18.04.3 LTS ( Lubuntu )
-* DE: LXDE
+Lubuntu: ( Ubuntu 20? )
+* DE: LXQT
 
 # General Commands:
 * Get the OS Details
@@ -15,10 +15,19 @@ Ubuntu: 18.04.3 LTS ( Lubuntu )
     * this setting does nothing
 
 # To Do
+* File layouts:
+    * Create a "utility" folder for scripts
+    * put picom in there
+    * have a picom.conf file in config
+    * have the config file copy that to the ~/.config folder
+    * have the picom.sh file run with that config
+
 * Screen tearing And graphics:
     * Get the nvidia software running
     * Make sure that the settings are configured for the card and monitor correctly
-    * Get the picom shit running on startup / As a service
+
+* picom on startup
+    * Get the picom.sh running on startup / As a service
 
 * General:
     * Add in SSH key for github
