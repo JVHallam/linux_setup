@@ -70,3 +70,9 @@ lspci | grep VGA
         * Replacing the old metamodes setting
 
 ## PICOM isn't needed
+
+## trying mouse acceleration shit
+xinput --set-prop <device id> 'libinput Accel Profile Enabled' 0, 1
+
+Now trying:
+sudo apt install gnome-tweaks

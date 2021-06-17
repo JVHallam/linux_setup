@@ -1,6 +1,12 @@
 #!/bin/bash
+packages=(
+    curl
+    htop
+    nethogs
+    vim-gtk
+    nvidia-settings
+)
 
-sudo apt install vim -y
-sudo apt install curl -y
-sudo apt install htop -y
-sudo apt install nethogs -y # Used for network monitoring
+for package in ${packages[@]}; do
+    sudo apt install $package -y
+done;
