@@ -1,3 +1,9 @@
 #!/bin/bash
 
-sudo apt --purge remove lubuntu-update-notifier -y
+packages=(
+	lubuntu-update-notifier
+)
+
+for package in ${packages[@]}; do
+	sudo apt purge $package -y
+done;
