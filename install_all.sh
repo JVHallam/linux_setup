@@ -1,20 +1,14 @@
 #!/bin/bash
 
-pushd .;
-cd general;
-echo "Current: General"
-sudo run-parts . --regex ".*\.sh"
-popd;
+order=(
+   configs
+   general
+   work
+)
 
-pushd .;
-cd work;
-echo "Current: Work"
-sudo run-parts . --regex ".*\.sh"
-popd;
-
-
-pushd .;
-cd configs;
-echo "Current: Configs"
-sudo run-parts . --regex ".*\.sh"
-popd;
+for dir in ${order[@]}; do
+    pushd .;
+    cd $dir
+    sudo run-parts . --regex ".*\.sh"
+    popd;
+done;
