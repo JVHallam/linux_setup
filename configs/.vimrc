@@ -26,3 +26,22 @@ set textwidth=0
 set wrap
 
 set incsearch
+
+"Change:
+"Question
+"Answer
+"
+"to
+"
+"Question\tAnswer
+function AnkiToTabs(count=1)
+    for i in range(a:count)
+        :s/\n/\t/g
+        :join
+        execute "normal! j"
+    endfor
+endfunction
+
+function Anki()
+    call AnkiToTabs(line('$') + 1)
+endfunction
