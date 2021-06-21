@@ -4,6 +4,7 @@
 rcFiles=(
     .vimrc
     .bashrc
+    .terraformrc
 )
 
 for rc in ${rcFiles[@]}; do
@@ -12,3 +13,4 @@ for rc in ${rcFiles[@]}; do
 done;
 
 git config --global credential.helper cache
+mkdir "$HOME/.terraform.d/plugin-cache" -p
