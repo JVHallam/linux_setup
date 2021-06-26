@@ -1,3 +1,4 @@
+"=================== Settings ======================
 set nohls
 set number
 set autoindent
@@ -27,6 +28,11 @@ set wrap
 
 set incsearch
 
+"=================== Mappings ======================
+
+nnoremap <insert> @@
+
+"=================== Functions ======================
 "Change:
 "Question
 "Answer
@@ -43,5 +49,6 @@ function AnkiToTabs(count=1)
 endfunction
 
 function Anki()
+    execute "normal! gg"
     call AnkiToTabs(line('$') + 1)
 endfunction

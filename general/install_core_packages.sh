@@ -5,6 +5,7 @@ packages=(
     nethogs
     vim-gtk
     nvidia-settings
+    jq
 )
 
 for package in ${packages[@]}; do
