@@ -12,5 +12,4 @@ for rc in ${rcFiles[@]}; do
     ln -s "$(pwd)/$rc" ~/$rc
 done;
 
-git config --global credential.helper cache
 mkdir "$HOME/.terraform.d/plugin-cache" -p

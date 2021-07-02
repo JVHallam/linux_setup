@@ -117,3 +117,4 @@ if ! shopt -oq posix; then
 fi
 
 BROWSER=/usr/bin/google-chrome
+git config --global credential.helper cache
