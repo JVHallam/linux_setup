@@ -51,4 +51,11 @@ endfunction
 function Anki()
     execute "normal! gg"
     call AnkiToTabs(line('$') + 1)
+
+    " Remove the extra tabs at the end of the file
+    execute "normal! G"
+    execute "normal! $"
+    execute "normal! b"
+    execute "normal! l"
+    execute "normal! D"
 endfunction
