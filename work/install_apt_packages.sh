@@ -1,6 +1,6 @@
 #!/bin/bash
 packages=(
-    dotnet-sdk-3.1
+    dotnet-sdk-5.0
 )
 
 for package in ${packages[@]}; do
