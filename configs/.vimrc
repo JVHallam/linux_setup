@@ -60,7 +60,7 @@ function Anki()
     execute "normal! D"
 endfunction
 
-function TFFormat()
+function Terraformat()
     exec "!terraform fmt " . expand("%")
     :e
 endfunction
