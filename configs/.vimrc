@@ -59,3 +59,8 @@ function Anki()
     execute "normal! l"
     execute "normal! D"
 endfunction
+
+function TFFormat()
+    exec "!terraform fmt " . expand("%")
+    :e
+endfunction
