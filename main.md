@@ -14,3 +14,13 @@ Lubuntu: ( Ubuntu 20? )
 # Todo
 * General:
     * Add in SSH key for github
+
+* lxqt and editing xml files, get an xml editor for this, or go ham and try sed/awk
+    * ~/.config/openbox/lxqt-rc.xml
+    * change the 
+      <keybind key="A-Tab">
+          <allDesktops>yes</allDesktops>
+
+    * to no
+      <keybind key="A-Tab">
+          <allDesktops>no</allDesktops>

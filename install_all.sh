@@ -4,6 +4,7 @@ order=(
    configs
    general
    work
+   drivers
 )
 
 for dir in ${order[@]}; do

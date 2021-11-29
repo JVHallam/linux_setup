@@ -1,9 +1,15 @@
 #!/bin/bash
-ssh-keygen -t ed25519 -C "jakehallam95@gmail.com"
+
+ssh-keygen -t rsa -b 4096 -C "jakehallam95@gmail.com"
 
 eval $(ssh-agent -s)
-ssh-add ~/.ssh/id_rsa
+
+# -K so that it persists restarts
+# ssh-add -l : to see if it's added
+ssh-add -K ~/.ssh/id_rsa 
 
 cat ~/.ssh/id_rsa.pub | xclip -selection c
-echo "NOW, go and add that key to github"
-echo "key added to clipboard"
+
+git remote set-url origin git@github.com:jvhallam/linux_setup.git
+
+echo "Public key added to clipboard!"
