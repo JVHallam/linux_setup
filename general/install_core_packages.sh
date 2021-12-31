@@ -6,6 +6,7 @@ packages=(
     vim-gtk
     nvidia-settings
     jq
+    xclip
 )
 
 for package in ${packages[@]}; do
